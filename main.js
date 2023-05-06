@@ -1,5 +1,18 @@
 let app = document.getElementById('app');
 
+// MAIN MENU
+let menuDiv = createElement('div', app, 'menuDiv', 'menuDiv');
+let menuHeader = createElement('h1', menuDiv, 'menuHeader', 'menuHeader');
+menuHeader.innerHTML = 'Connect 4';
+let menuButton1 = createElement('button', menuDiv, 'menuButton1', 'menuButton');
+menuButton1.innerHTML = 'Play vs Player';
+let menuButton2 = createElement('button', menuDiv, 'menuButton2', 'menuButton');
+menuButton2.innerHTML = 'Game Rules';
+menuButton2.addEventListener('click', function() {
+    menuDiv.hidden = true;
+    rulesDiv.hidden = false;
+})
+
 // RULES PAGE
 let rulesDiv = createElement('div', app, 'rulesDiv', 'rulesDiv');
 rulesDiv.hidden = true;
